@@ -5,19 +5,30 @@ import PropTypes from "prop-types";
 
 const Header = props => {
   return (
-    <div>
-      <h1 style={headingStyle}>{props.branding}</h1>
-    </div>
+    <nav className="navbar">
+      <div className="headContainer">
+        <a href="/" className="nav-brand">
+          {props.branding}
+        </a>
+      </div>
+      <ul>
+        <li className="nav-item">
+          <a href="/" className="navLink">
+            Home
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="/" className="navLink">
+            Other
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
 Header.defaultProps = {
   branding: "My App"
-};
-
-const headingStyle = {
-  color: "red",
-  fontSize: "50px"
 };
 
 Header.propTypes = {
