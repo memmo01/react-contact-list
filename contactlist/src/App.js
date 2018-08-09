@@ -11,18 +11,12 @@ class App extends Component {
     };
   }
 
-  handleClick() {
-    this.setState({
-      showHello: !this.state.showHello
-    });
-  }
   render() {
     return (
       <div className="App">
         <Header />
-        <Contact />
-        <button onClick={this.handleClick.bind(this)}>click</button>
-        {this.state.showHello ? <h1>hi</h1> : null}
+        <Contact name="Michael" email="m@mm.com" phone="000-000-0000" />
+        <Contact name="Laura" email="l@mm.com" phone="010-000-0000" />
       </div>
     );
   }
